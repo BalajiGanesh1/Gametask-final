@@ -82,24 +82,18 @@ export default class Asteroid {
     var image = new Image();
     image.src='https://pngimage.net/wp-content/uploads/2018/05/asteroids-png-1.png';
     console.log(image);
-    //context.save();
-    //context.translate(this.position.x, this.position.y);
-    //context.rotate(this.rotation * Math.PI / 180);
+    
     context.strokeStyle = 'yellow';
     context.lineWidth = 2;
     context.beginPath();
-    //context.moveTo(0, -this.radius);
     image.onload= context.drawImage(image,this.position.x-1.8*this.radius, this.position.y-1.8*this.radius, 3.5*this.radius,3*this.radius);
     
   
     
    
-    /*for (let i = 1; i < this.vertices.length; i++) {
-      context.lineTo(this.vertices[i].x, this.vertices[i].y);
-    }*/
     
     context.closePath();
     context.stroke();
-    //context.restore();
+    
   }
 }
